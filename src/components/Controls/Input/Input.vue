@@ -11,5 +11,12 @@ const classNames = computed(() => ({
 </script>
 
 <template>
-    <input :class="classNames" type="text" />
+    <div :class="css.input__wrapper">
+        <input :class="classNames" type="text" />
+        <span :class="css.input__icon">
+            <slot>
+                <img src="/search.svg" alt="search" />
+            </slot>
+        </span>
+    </div>
 </template>

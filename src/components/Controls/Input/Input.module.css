@@ -1,5 +1,24 @@
 .input_main {
-    padding: 6px 10px;
+    padding: 6px 10px 6px 35px;
     font-family: inherit;
     width: 100%;
+    font-size: 1.2rem;
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.input__icon img {
+    height: 25px;
+    width: 25px;
 }
