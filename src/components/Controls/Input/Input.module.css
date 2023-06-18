@@ -1,8 +1,8 @@
 .input__main {
-    padding: 6px 10px 6px 35px;
+    padding: 5px 0 5px 30px;
     font-family: inherit;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .input__wrapper {
@@ -13,7 +13,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 5px;
+    left: 2px;
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -21,4 +22,11 @@
 .input__icon img {
     height: 25px;
     width: 25px;
+}
+
+.input__form {
+    width: 100%;
+    font-family: inherit;
+    padding: 5px 5px;
+    font-size: 1.1rem;
 }

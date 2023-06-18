@@ -1,29 +1,31 @@
-.modal__overlay {
-    position: absolute;
-    inset: 0 0 0 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .modal {
-    width: clamp(300px, 50%, 1200px);
-    min-height: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px 10px;
-    position: relative;
-    word-break: break-all;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal__header button {
+.modal_body {
+    background-color: #fff;
+    font-weight: 700;
+    min-height: 600px;
+    width: clamp(300px, 70%, 1200px);
+    position: relative;
+    padding: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal_times {
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 8px;
     border: none;
     background: none;
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    font-size: 1.2rem;
     cursor: pointer;
 }

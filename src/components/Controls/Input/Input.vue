@@ -2,12 +2,13 @@
 import { computed } from 'vue';
 import css from './Input.module.css';
 
-const props = defineProps(["styleType", "modelValue"]);
+const props = defineProps(["styleType", "modelValue", "placeholder"]);
 
 defineEmits(["update:modelValue"]);
 
 const classNames = computed(() => ({
     [css.input__main]: props.styleType === "icon",
+    [css.input__form]: props.styleType === "form",
     [css.input__default]: !props.styleType
 }))
 </script>
@@ -18,9 +19,10 @@ const classNames = computed(() => ({
             :class="[classNames]" 
             type="text"
             :value="modelValue"
+            :placeholder="placeholder"
             @input="$emit('update:modelValue', $event.target.value)" 
         />
-        <span :class="css.input__icon">
+        <span :class="css.input__icon" v-if="props.styleType === 'icon'">
             <slot>
                 <img src="/search.svg" alt="search" />
             </slot>

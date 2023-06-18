@@ -6,6 +6,7 @@ import Checkbox from "../Controls/Checkbox/Checkbox.vue";
 import { ref } from "vue";
 import Button from "../Controls/Button/Button.vue";
 import Modal from "../Modal/Modal.vue";
+import Editor from "../Editor/Editor.vue";
 
 const props = defineProps(["search"])
 
@@ -47,5 +48,7 @@ function filterFits(lettersMock) {
             </Letter>
         </section>
     </main>
-    <Modal :show="isOpenEditor" @close="isOpenEditor = false"></Modal>
+    <Modal :show="isOpenEditor" @close="isOpenEditor = false">
+        <Editor />
+    </Modal>
 </template>
