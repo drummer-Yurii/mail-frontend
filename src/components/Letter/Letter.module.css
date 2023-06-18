@@ -1,4 +1,16 @@
 .letter {
     display: grid;
     grid-template-columns: 5% 20% 50% 5% 20%;
+    padding: 15px 15px;
+}
+
+.letter_checked {
+    background-color: #ddd;
+}
+
+.letter__checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
 }
