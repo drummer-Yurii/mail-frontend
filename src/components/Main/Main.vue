@@ -5,10 +5,12 @@ import css from "./Main.module.css";
 import Checkbox from "../Controls/Checkbox/Checkbox.vue";
 import { ref } from "vue";
 import Button from "../Controls/Button/Button.vue";
+import Modal from "../Modal/Modal.vue";
 
 const props = defineProps(["search"])
 
 const isAllChecked = ref(false);
+const isOpenEditor = ref(false);
 
 function handler (state) {
     isAllChecked.value = state;
@@ -26,7 +28,7 @@ function filterFits(lettersMock) {
     <main :class="css.main">
 
         <section :class="css.main__create">
-            <Button>Create new letter</Button>
+            <Button @click="isOpenEditor = !isOpenEditor">Create new letter</Button>
         </section>
 
         <section :class="css.letters">
@@ -45,4 +47,5 @@ function filterFits(lettersMock) {
             </Letter>
         </section>
     </main>
+    <Modal :show="isOpenEditor" @close="isOpenEditor = false"></Modal>
 </template>
