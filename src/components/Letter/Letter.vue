@@ -32,7 +32,7 @@ const letterClasses = computed(() => ({
         <div class="">
             <slot name="sender"></slot>
         </div>
-        <div class="">
+        <div :class="css.letter__title">
             <slot name="title"></slot>
         </div>
         <div>

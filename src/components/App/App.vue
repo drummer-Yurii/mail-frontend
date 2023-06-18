@@ -1,12 +1,16 @@
 <script setup>
+import { ref } from 'vue';
 import Header from '../Header/Header.vue';
 import Main from '../Main/Main.vue';
-import css from './App.module.css';
+
+const searchValue = ref("")
+
+function search (value) {
+  searchValue.value = value
+}
 </script>
 
 <template>
-  <div :class="css.page">
-    <Header />
-    <Main />
-  </div>
+    <Header :search="search" />
+    <Main :search=" searchValue" />
 </template>

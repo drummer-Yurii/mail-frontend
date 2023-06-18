@@ -1,4 +1,4 @@
-export const LettersMock = [
+export const lettersMock = [
     {
         title: "Hello, how are you? I'm have....",
         isImportant: true,
