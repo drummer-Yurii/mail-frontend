@@ -1,4 +1,4 @@
 .letter {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 5% 20% 50% 5% 20%;
 }

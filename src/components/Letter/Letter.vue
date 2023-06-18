@@ -14,7 +14,6 @@ const stringDate = computed(() => {
     <div :class="css.letter">
         <div class="">
             <Checkbox />
-            <span v-if="isImportant">!</span>
         </div>
         <div class="">
             <slot name="sender"></slot>
@@ -22,5 +21,9 @@ const stringDate = computed(() => {
         <div class="">
             <slot name="title"></slot>
         </div>
-    <div class="">{{ stringDate }}</div>
-</div></template>
+        <div>
+            <span v-if="isImportant"><img src="/star.svg" alt="star" width="15" height="15"></span>
+        </div>
+        <div class="">{{ stringDate }}</div>
+    </div>
+</template>
