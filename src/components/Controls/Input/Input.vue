@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import css from './Input.module.css';
 
-const props = defineProps(["styleType", "modelValue", "placeholder"]);
+const props = defineProps(["styleType", "modelValue", "placeholder", "type"]);
 
 defineEmits(["update:modelValue"]);
 
@@ -17,9 +17,9 @@ const classNames = computed(() => ({
     <div :class="css.input__wrapper">
         <input 
             :class="[classNames]" 
-            type="text"
             :value="modelValue"
             :placeholder="placeholder"
+            :type="type"
             @input="$emit('update:modelValue', $event.target.value)" 
         />
         <span :class="css.input__icon" v-if="props.styleType === 'icon'">
